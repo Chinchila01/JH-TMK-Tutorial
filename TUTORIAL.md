@@ -61,7 +61,7 @@ This tutorial will be creating a file for a plank keyboard but, again, the proce
 
 The first line of your file should be `#include "extended_keymap_common.h"`. Don't worry about what it does, just put it at the top of your file and add a space or two afterwards.
 
-After doing that we are now going to create your first keymap. Copy and paste the following code into your editor.
+After doing that we are now going to create your first keymap. Copy and paste the following code into your editor:
 
 ```
 /* MIT Layout (default)
@@ -83,6 +83,57 @@ After doing that we are now going to create your first keymap. Copy and paste th
     {    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     }
   },
 ```
+
+At the top is a section which is commented out, this means that the software that converts this file into a form ready to send to the keyboard will ignore it. It is there so we can write in a keymap using just the alphanumeric symbols we are used to.
+
+##### 2.2.3.1 The Alphabet
+
+I am a qwerty typist, so lets fill in the alphabet:
+
+```
+/* MIT Layout (default)
+ *
+ * ,-----------------------------------------------------------------------.
+ * |     |  q  |  w  |  e  |  r  |  t  |  y  |  u  |  i  |  o  |  p  |     |
+ * |-----------------------------------------------------------------------|
+ * |     |  a  |  s  |  d  |  f  |  g  |  h  |  j  |  k  |  l  |     |     |
+ * |-----------------------------------------------------------------------|
+ * |     |  z  |  x  |  c  |  v  |  b  |  n  |  m  |     |     |     |     |
+ * |-----------------------------------------------------------------------|
+ * |     |     |     |     |     |    spc    |     |     |     |     |     |
+ * `-----------------------------------------------------------------------'
+ */
+ ```
+
+Okay, we've got our alphabet keymap conceptualised the way we want. Let's fill in the part that actually gets compiled.
+
+```
+  [0] = {
+    {    , KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,    }, 
+    {    , KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L,     ,    },
+    {    , KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M,     ,     ,     ,    },
+    {    ,     ,     ,     ,     ,     KC_SPC,     ,     ,     ,     ,    }
+  },
+```
+Each key is prefixed with `KC_` followed by the key name. The alphabet keys are easy, as they are simply the capitalised version of each letter.
+
+You might not like the above layout. Feel free to swap things around
+
+##### 2.2.3.2 MIT and Grid Layout 
+
+You will notice that inside the curly braces after `const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { };` there are a series of rows delimited between braces and separated by commas (except for the last row). Inside the curly braces that make up each row are a series of colums delimited by commas within those braces. You adjust these parameters according to the lay of the keyboard. I have shown a keymap for an MIT layout. But what about a grid? Simple, you just add another comma to the bottom row. So we get:
+
+```
+  [0] = {
+    {    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     }, 
+    {    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     },
+    {    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     },
+    {    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     }
+  },
+```
+##### 2.2.3.3 The Full Keyset
+
+##### 2.2.3.4 Layers
 
 ### 2.3. Functions
 ### 2.4. Macros
