@@ -37,7 +37,7 @@ This information is provided as a guide and every effort has been made to make s
 ## 2. The Basics
 ### 2.1 Installing the Right Tools
 
-**Jack, I was thinking about canabalising your existing [Tutorial](https://github.com/jackhumbert/tmk_keyboard/blob/master/doc/build.md). I'll post credit at the end naturally, but are you okay with that?**
+**Jack, I was thinking about canabalising your existing [Tutorial](https://github.com/jackhumbert/tmk_keyboard/blob/master/doc/build.md) for this part. I'll post credit at the end naturally, but are you okay with that?**
 
 #### 2.1.1 Summary
 In this section you will download the appropriate version of the tmk_keyboard firmware as well as dfu_programmer and operating system specific development tools so that you have everything you need compile and transfer (flash) the firmware. You will then verify the installation.
