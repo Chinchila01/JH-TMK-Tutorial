@@ -6,7 +6,7 @@ This tutorial is split into two sections: ‘Basics’ and ‘Beyond the Basics.
 
 ### 1.1 Method
 The ‘Basics’ section of this tutorial will be done in the style of following the implementation of *a particular* keymap from start to finish. This is a keymap for a Planck ortho—linear keyboard. This has three advantages:
-* Programmable keyboards offer, by definition, an enourmous array of possible configurations and uses. The task of outlining all of them would be impossible. Nonetheless the principles involved in any one implementation are *transferrable* to any other. By following *one* implementation you will gain the skills to write virtually any customisation.
+* Programmable keyboards offer, by definition, an enormous array of possible configurations and uses. The task of outlining all of them would be impossible. Nonetheless the principles involved in any one implementation are *transferrable* to any other. By following *one* implementation you will gain the skills to write virtually any customisation.
 * You will see the principle of iterative refinement at work, which is a part of any project of this kind.
 * By following the tutorial and at each step copying what is done modified for your own requirements you can come out the other end with a finished product that is very close to—if not exactly—what you want. It is therefore recommended that you **follow and adapt** your requirements as they go along.
 
@@ -37,7 +37,7 @@ This information is provided as a guide and every effort has been made to make s
 ## 2. The Basics
 ### 2.1 Installing the Right Tools
 
-**Jack, I was thinking about canabalising your existing [Tutorial](https://github.com/jackhumbert/tmk_keyboard/blob/master/doc/build.md) for this part. I'll post credit at the end naturally, but are you okay with that?**
+**Jack, I was thinking about cannibalising your existing [Tutorial](https://github.com/jackhumbert/tmk_keyboard/blob/master/doc/build.md) for this part. I'll post credit at the end naturally, but are you okay with that?**
 
 #### 2.1.1 Summary
 In this section you will download the appropriate version of the tmk_keyboard firmware as well as dfu_programmer and operating system specific development tools so that you have everything you need compile and transfer (flash) the firmware. You will then verify the installation.
@@ -47,13 +47,13 @@ In this section you will download the appropriate version of the tmk_keyboard fi
 #### 2.1.3 Verifying
 
 ### 2.2. Keymaps
-\\ TODO check on priority of higher layers (neccesity of TRNS).
+\\ TODO check on priority of higher layers (necessity of TRNS).
 #### 2.2.1 Summary
-In this section you will create a new keymap file, add the `#include "extended_keymap_common.h"` Statement to the beginning, and write the default layer of the keyboard within a `const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { };` statement as a series of rows delimited between braces and separated by commas (except for the last) and a series of colums delimited by commas within those braces.
+In this section you will create a new keymap file, add the `#include "extended_keymap_common.h"` Statement to the beginning, and write the default layer of the keyboard within a `const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { };` statement as a series of rows delimited between braces and separated by commas (except for the last) and a series of columns delimited by commas within those braces.
 
 #### 2.2.2 Creating a keymap file
 
-Using your favorite text editor create a new file with the name `<yourkepmap.c>` in the 'planck' or 'quark' folder of your tmk installation. In other words, if you are in the tmk firmare directory go the folder `keyboard/planck/` or `keyboard/quark`. You should replace the 'yourkeymap' part of `<yourkeymap.>` with whatever name you want.
+Using your favourite text editor create a new file with the name `<yourkepmap.c>` in the 'planck' or 'quark' folder of your tmk installation. In other words, if you are in the tmk firmare directory go the folder `keyboard/planck/` or `keyboard/quark`. You should replace the 'yourkeymap' part of `<yourkeymap.>` with whatever name you want.
 
 This tutorial will be creating a file for a plank keyboard but, again, the process is similar for a quark.
 
@@ -121,7 +121,7 @@ You might not like the above layout. Feel free to swap things around
 
 ##### 2.2.3.2 MIT and Grid Layout 
 
-You will notice that inside the curly braces after `const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { };` there are a series of rows delimited between braces and separated by commas (except for the last row). Inside the curly braces that make up each row are a series of colums delimited by commas within those braces. You adjust these parameters according to the lay of the keyboard. I have shown a keymap for an MIT layout. But what about a grid? Simple, you just add another comma to the bottom row. So we get:
+You will notice that inside the curly braces after `const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { };` there are a series of rows delimited between braces and separated by commas (except for the last row). Inside the curly braces that make up each row are a series of columns delimited by commas within those braces. You adjust these parameters according to the lay of the keyboard. I have shown a keymap for an MIT layout. But what about a grid? Simple, you just add another comma to the bottom row. So we get:
 
 ```
   [0] = {
@@ -137,9 +137,9 @@ You will notice that inside the curly braces after `const uint16_t PROGMEM keyma
 
 ### 2.3. Functions
 ### 2.4. Macros
-### 2.5. Compliation and Flashing
+### 2.5. Compilation and Flashing
 ## 3. Beyond the Basics
 ### 3.1 Backlight Control
 ### 3.2 Magic Key
-### 3.3 Mousekeys
+### 3.3 Mouse Keys
 ### 3.4 Custom Functions
