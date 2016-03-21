@@ -37,7 +37,7 @@ This information is provided as a guide and every effort has been made to make s
 ## 2. The Basics
 ### 2.1 Installing the Right Tools
 
-**Jack, I was thinking about cannibalising your existing [Tutorial](https://github.com/jackhumbert/tmk_keyboard/blob/master/doc/build.md) for this part. I'll post credit at the end naturally, but are you okay with that?**
+**Jack, I was thinking about cannibalising your existing [Tutorial](https://github.com/jackhumbert/qmk_firmware/blob/master/tmk_core/doc/build.md) for this part. I'll post credit at the end naturally, but are you okay with that?**
 
 #### 2.1.1 Summary
 In this section you will download the appropriate version of the tmk_keyboard firmware as well as dfu_programmer and operating system specific development tools so that you have everything you need compile and transfer (flash) the firmware. You will then verify the installation.
@@ -46,16 +46,16 @@ In this section you will download the appropriate version of the tmk_keyboard fi
 
 ##### 2.1.2.1 Windows
 1. Install [WinAVR Tools](http://sourceforge.net/projects/winavr/) for AVR GCC compiler.
-2. Install [DFU-Programmer][dfu-prog] (the -win one).
+2. Install [DFU-Programmer](http://dfu-programmer.sourceforge.net/) (the -win one).
 3. Start DFU bootloader on the chip first time you will see 'Found New Hardware Wizard' to install driver. If you install device driver properly you can find chip name like 'ATmega32U4' under 'LibUSB-Win32 Devices' tree on 'Device Manager'. If not you will need to update its driver on 'Device Manager' to the `dfu-programmer` driver.
 
 ##### 2.1.2.2 Mac
 1. Install [CrossPack](http://www.obdev.at/products/crosspack/index.html) or install Xcode from the App Store and install the Command Line Tools from `Xcode->Preferences->Downloads`.
-2. Install [DFU-Programmer][dfu-prog].
+2. Install [DFU-Programmer](http://dfu-programmer.sourceforge.net/).
 
 ##### 2.1.2.3 Linux
 1. Install AVR GCC with your favorite package manager.
-2. Install [DFU-Programmer][dfu-prog].
+2. Install [DFU-Programmer](http://dfu-programmer.sourceforge.net/).
 
 #### 2.1.3 Verify Your Installation
 1. Clone the following repository: https://github.com/jackhumbert/tmk_keyboard
